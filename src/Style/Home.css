@@ -1,0 +1,142 @@
+img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+    z-index: 0;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  position: absolute;
+  top: 40%;
+    left: 30%;
+    justify-content: center;
+    z-index: 1;
+}
+.intro h1 {
+  font-size: 4em;
+  margin: 10px 0;
+  color: #ffffff;
+  position: relative;
+    z-index: 1;
+    top: auto;
+    left: 50px;
+
+}
+.intro h2 {
+  font-size: 2.5em;
+  /* margin: 10px 0 20px 0; */
+  color: #ffffff;
+  position: relative;
+    /* z-index: 1; */
+    /* top: auto;
+    left: 50px; */
+}
+.intro button {
+  padding: 8px 10px;
+  font-size: 1em;
+  color: #fff;
+  background-color:#dc3545;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+    position: relative;
+}
+section {
+  display: grid;
+  box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 900px;
+  position: relative;
+    margin: 100px auto;
+    background-color: white;
+    padding: 20px;
+
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+.div1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 5 / span 5;
+}
+
+.div2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 5 / span 5;
+    grid-column-start: 3;
+}
+.about-skills {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+h2 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.ligne {
+    width: auto;
+    height: 4px;
+    background-color: blue;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+}
+.about, .skills {
+  flex: 1;
+}
+
+
+
+.skill-bar {
+  margin-bottom: 1rem;
+}
+
+.skill-bar span {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 14px;
+}
+
+.bar {
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  position: relative;
+}
+
+.bar::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  /* background-color: red; */
+  border-radius: 5px;
+}
+
+.bar.html::after { width: 90%; 
+  background-color: #ed390b; }
+.bar.css::after { width: 80%; 
+  background-color:  #0ecbff; }
+.bar.js::after { width: 70%; 
+  background-color: #f0b400; }
+.bar.php::after { width: 60%; 
+  background-color: green; }
+.bar.react::after { width: 50%; 
+  background-color: #264de4; }
+
+@media (max-width: 968px) {
+  .about-skills {
+    flex-direction: column;
+  }
+}
