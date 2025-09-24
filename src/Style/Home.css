@@ -2,7 +2,23 @@ img {
   max-width: 100%;
   height: auto;
   position: relative;
-    z-index: 0;
+  z-index: 0;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.intro button {
+  margin-top: 15px;
 }
 
 .intro {
@@ -51,7 +67,8 @@ section {
   display: grid;
   box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  width: 900px;
+  width: 950px;
+  height: auto;
   position: relative;
     margin: 100px auto;
     background-color: white;
@@ -78,7 +95,7 @@ section {
 }
 .about-skills {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2rem;
   background-color: #ffffff;
 }
@@ -86,13 +103,12 @@ h2 {
     margin-bottom: 1rem;
     font-weight: bold;
 }
-.ligne {
-    width: auto;
-    height: 4px;
-    background-color: blue;
-    margin-bottom: 1rem;
-    border-radius: 2px;
+.profile {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
 }
+
 .about, .skills {
   flex: 1;
 }
@@ -100,40 +116,23 @@ h2 {
 
 
 .skill-bar {
-  margin-bottom: 1rem;
+  margin: 2rem;
 }
 
 .skill-bar span {
   display: block;
-  margin-bottom: 0.3rem;
   font-weight: 14px;
 }
-
-.bar {
-  height: 10px;
-  background-color: #ddd;
-  border-radius: 5px;
-  position: relative;
+.progress {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
-.bar::after {
-  content: '';
-  position: absolute;
-  height: 100%;
-  /* background-color: red; */
-  border-radius: 5px;
-}
 
-.bar.html::after { width: 90%; 
-  background-color: #ed390b; }
-.bar.css::after { width: 80%; 
-  background-color:  #0ecbff; }
-.bar.js::after { width: 70%; 
-  background-color: #f0b400; }
-.bar.php::after { width: 60%; 
-  background-color: green; }
-.bar.react::after { width: 50%; 
-  background-color: #264de4; }
+
+
 
 @media (max-width: 968px) {
   .about-skills {

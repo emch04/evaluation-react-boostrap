@@ -1,0 +1,38 @@
+/* Conteneur principal de la barre de navigation */
+.navbar {
+  background-color: #111;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style du logo ou nom du site */
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Liste horizontale des liens de navigation */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style des liens de navigation */
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+/* Effet au survol des liens */
+.navbar ul li a:hover {
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size: 19px;
+}
