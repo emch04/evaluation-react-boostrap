@@ -1,19 +1,46 @@
-.card-title{
+/* --- Page Service --- */
+
+/* Titre des cartes de service */
+.card-title {
     font-weight: bold;
 }
-.card-text{
-    font-weight: 400;
-
+img {
+    width: 100%;
+    height: 100%;
 }
-.section{
+
+/* Texte descriptif dans les cartes */
+.card-text {
+    font-weight: 400;
+}
+
+/* Section contenant les cartes */
+.section {
     margin-bottom: 100px;
 }
+
+/* Style de chaque carte */
 .card {
     margin: 20px;
     padding: 10px;
 }
-svg{
-    color:#0d6efd;
+
+/* Style des icônes SVG dans les cartes */
+svg {
+    color: #0d6efd;
     height: 40px;
     width: 40px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  /* Réduit la marge inférieure de la section sur mobile */
+  .section {
+    margin-bottom: 50px;
+  }
+
+  /* Ajuste la marge des cartes pour un meilleur affichage sur mobile */
+  .card {
+    margin: 10px 0;
+  }
 }

@@ -1,21 +1,25 @@
+/* Style du conteneur principal du pied de page */
 .footer {
   background-color: #111;
   color: white;
   padding: 40px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Permet aux sections de passer à la ligne sur les petits écrans */
 }
 
+/* Style de chaque section du pied de page */
 .footer-section {
   width: 30%;
   min-width: 200px;
 }
 
+/* Titres des sections */
 .footer-section h4 {
   margin-bottom: 15px;
 }
 
+/* Listes à puces (utilisées pour les liens) */
 .footer-section ul {
   list-style: none;
   padding: 0;
@@ -25,6 +29,7 @@
   margin-bottom: 8px;
 }
 
+/* Liens dans le pied de page */
 .footer-section a {
   color: white;
   text-decoration: none;
@@ -33,18 +38,30 @@
 
 .footer-section a:hover {
   color: #746262;
-  transition: 0,3s;
+  transition: 0.3s; /* Corrigé la virgule en point */
 }
 
+/* Conteneur des icônes de réseaux sociaux */
 .socials a {
   margin-right: 10px;
 }
-svg{
-    width: 25px;
-    color:white;
-}
-svg:hover{
-    color: darkgrey;
-    transition: 0,3s;
 
+/* Style des icônes SVG */
+svg {
+    width: 25px;
+    color: white;
+}
+
+svg:hover {
+    color: darkgrey;
+    transition: 0.3s; /* Corrigé la virgule en point */
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  /* Sur les petits écrans, chaque section prend toute la largeur et s'empile */
+  .footer-section {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }

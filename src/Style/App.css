@@ -1,3 +1,7 @@
+/* 
+  Réinitialisation globale des styles (CSS Reset)
+  et définition de la police par défaut pour toute l'application.
+*/
 * {
   font-family: 'Nunito Sans', sans-serif;
   margin: 0;

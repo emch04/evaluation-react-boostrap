@@ -1,0 +1,44 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Assure que toutes les cartes d'une même ligne ont la même hauteur */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px; /* Hauteur fixe pour les images */
+  object-fit: cover; /* Assure que les images couvrent la zone sans se déformer */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pousse le bouton vers le bas de la carte */
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-text {
+  flex-grow: 1; /* Permet à la zone de texte de s'agrandir pour remplir l'espace disponible */
+}
+.btn {
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+}
