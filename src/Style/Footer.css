@@ -2,9 +2,11 @@
 .footer {
   background-color: #111;
   color: white;
-  padding: 40px;
+  padding: 20px 50px 20px 120px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  text-align: left; /* Aligne le texte à gauche */
+  align-items: flex-start; /* Aligne les sections en haut */
   flex-wrap: wrap; /* Permet aux sections de passer à la ligne sur les petits écrans */
 }
 
