@@ -1,9 +1,10 @@
 /* Style du conteneur principal du pied de page */
 .footer {
-  background-color: #111;
+  background-color: #212529;
   color: white;
   padding: 20px 50px 20px 120px;
   display: flex;
+  
   justify-content: space-evenly;
   text-align: left; /* Aligne le texte à gauche */
   align-items: flex-start; /* Aligne les sections en haut */
@@ -14,6 +15,7 @@
 .footer-section {
   width: 30%;
   min-width: 200px;
+  text-align: left ;
 }
 
 /* Titres des sections */

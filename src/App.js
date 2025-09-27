@@ -8,6 +8,7 @@ import Contact from "./Pages/Contact";
 import Service from "./Pages/Service";
 import About from "./Pages/About";
 import Portfolio from "./Pages/Portfolio";
+import Profil from "./Pages/Profil";
 import Navbar from "./Pages/Navbar";
 import Footer from "./Pages/Footer";
 import "./Style/App.css";
@@ -15,22 +16,26 @@ import "./Style/App.css";
 // Composant principal de l'application
 const App = () => {
   return (
-    <div>
+    <div className="app-container">
       {/* Barre de navigation affichée sur toutes les pages */}
       <Navbar />
       {/* Définition des routes de l'application */}
-      <Routes>
-        {/* Page d'accueil */}
-        <Route path="/" element={<Home />} />
-        {/* Page À propos */}
-        <Route path="/About" element={<About />} />
-        {/* Page Services */}
-        <Route path="/Service" element={<Service />} />
-        {/* Page Portfolio */}
-        <Route path="/Portfolio" element={<Portfolio />} />
-        {/* Page Contact */}
-        <Route path="/Contact" element={<Contact />} />
-      </Routes>
+      <main className="content-wrap">
+        <Routes>
+          {/* Page d'accueil */}
+          <Route path="/" element={<Home />} />
+          {/* Page À propos */}
+          <Route path="/About" element={<About />} />
+          {/* Page Services */}
+          <Route path="/Service" element={<Service />} />
+          {/* Page Portfolio */}
+          <Route path="/Portfolio" element={<Portfolio />} />
+          {/* Page Contact */}
+          <Route path="/Contact" element={<Contact />} />
+          {/* Page Profil */}
+          <Route path="/Profil" element={<Profil />} />
+        </Routes>
+      </main>
       {/* Pied de page affiché sur toutes les pages */}
       <Footer />
     </div>

@@ -20,7 +20,7 @@ export default function Home() {
 
         {/* Bloc d'introduction superposé à l'image */}
         <div className="intro">
-          <h1>Bonjour, je suis Emch Kongo</h1>
+          <h1>Bonjour, je suis John Doe</h1>
           <h2>Développeur Web full stack</h2>
           
           {/* 
@@ -31,7 +31,7 @@ export default function Home() {
               C'est utile pour des ajustements rapides, mais il est souvent préférable de les mettre dans un fichier CSS.
           */}
           <button
-            onClick={() => navigate("/about")}
+            onClick={() => navigate("/")}
             className="btn btn-primary"
             style={{
               "--bs-btn-padding-y": ".25rem",

@@ -38,6 +38,9 @@ svg {
   .section {
     margin-bottom: 50px;
   }
+  img{
+    width: 100%;
+  }
 
   /* Ajuste la marge des cartes pour un meilleur affichage sur mobile */
   .card {

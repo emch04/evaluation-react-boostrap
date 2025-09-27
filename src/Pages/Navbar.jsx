@@ -1,49 +1,40 @@
-// Importation du composant Link pour la navigation interne et du style CSS de la navbar
+// Importation des dépendances et des composants
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi"; // Importation des icônes de menu (burger et croix)
+import { FiMenu, FiX } from "react-icons/fi";
+import Profil from "./Profil"; // Importation du composant Profil
 import "../Style/Navbar.css";
 
-// Composant Navbar affichant la barre de navigation principale du site
+// Composant Navbar
 function Navbar() {
-  // --- GESTION DE L'ÉTAT ---
-  // `isOpen` est une variable d'état qui détermine si le menu mobile est ouvert (true) ou fermé (false).
-  // `setIsOpen` est la fonction pour mettre à jour cet état.
-  // Le menu est fermé par défaut (useState(false)).
   const [isOpen, setIsOpen] = useState(false);
+  const [showGithubModal, setShowGithubModal] = useState(false);
 
   return (
-    // Conteneur principal de la barre de navigation
     <header className="navbar">
       
-      {/* Logo du site. Modifiez le texte ici pour changer le logo. */}
-      <div className="logo">EMCH KONGO</div>
+      {/* Logo cliquable */}
+      <div className="logo" onClick={() => setShowGithubModal(true)}>John Doe</div>
 
-      {/* 
-        Icône du menu "burger" pour les écrans mobiles.
-        - `onClick` : Au clic, on inverse la valeur de `isOpen` (si c'est ouvert, ça ferme, et vice-versa).
-        - `{isOpen ? <FiX /> : <FiMenu />}` : C'est une condition ternaire.
-          - SI `isOpen` est `true`, on affiche l'icône de fermeture (la croix <FiX />).
-          - SINON (`:`), on affiche l'icône du menu burger (<FiMenu />).
-      */}
+      {/* Modal GitHub qui affiche le composant Profil */}
+      {showGithubModal && (
+        <div className="github-modal">
+          {/* Le composant Profil gère son propre contenu et le bouton de fermeture */}
+          <Profil onClose={() => setShowGithubModal(false)} />
+        </div>
+      )}
+
+      {/* Icône du menu burger pour mobile */}
       <div className="burger-icon" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
       </div>
 
-      {/* 
-        Menu de navigation principal.
-        - `className={isOpen ? "nav-links open" : "nav-links"}` : Applique la classe `open` uniquement si `isOpen` est `true`, 
-          ce qui déclenche l'animation d'ouverture du menu en CSS.
-        - `onMouseLeave` : Un événement qui se déclenche quand le curseur de la souris quitte la zone du menu.
-          Ici, on l'utilise pour fermer automatiquement le menu.
-      */}
+      {/* Liens de navigation */}
       <nav 
         className={isOpen ? "nav-links open" : "nav-links"}
         onMouseLeave={() => setIsOpen(false)}
       >
-        {/* Liste des liens de navigation */}
         <ul>
-          {/* Chaque `<li>` contient un lien `Link` de React Router pour la navigation sans recharger la page. */}
           <li><Link to="/">Home</Link></li>
           <li><Link to="/Service">Services</Link></li>
           <li><Link to="/Portfolio">Portfolio</Link></li>

@@ -6,14 +6,21 @@ img {
   padding: 0;
   margin: 0; /* espace en bas entre les sections */
 }
+div{
+  margin: 0;
+  padding: 0;
+}
+.text-centre{
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%; /* Assure que toutes les cartes d'une même ligne ont la même hauteur */
    border-top: 1px solid rgba(0, 0, 0, 0.175); 
 }
-#id{
+.col{
   padding: 0;
-  margin: 0; /* espace en bas entre les sections */
 }
 
 .card:hover {

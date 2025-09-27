@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     // Le conteneur principal du pied de page, stylisé via `Footer.css`
-    <footer className="footer">
+    <footer className="footer" >
       {/* 
         SECTION 1 : IDENTITÉ ET CONTACT
         Modifiez les informations ci-dessous avec vos propres données.
       */}
       <div className="footer-section">
-        <h4>Emch Kongo</h4>
+        <h4> John Doe</h4>
         <p>
           40 rue Lorem Ipsum
           <br />
@@ -148,3 +148,4 @@ function Footer() {
 }
 
 export default Footer;
+

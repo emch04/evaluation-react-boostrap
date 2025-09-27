@@ -1,0 +1,69 @@
+/* Vous pouvez ajouter ici des styles personnalisés pour la modale de profil si nécessaire. */
+
+.img-fluid {
+  max-width: 300px;
+  height: 360px;
+}
+
+ul,li{
+  padding: 2px;
+}
+.modal-body{
+  padding: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;}
+
+
+  
+  div{
+    padding: 0;
+    margin: 0;
+  }
+  hr{
+    padding: 0;
+    margin: 0;
+  }
+.modal-footer{
+  padding: 5px;
+}  
+.modal-header{
+  padding: 10px;
+}
+.modal-content{
+  position: absolute;
+  width: 700px;
+  top: 35%;
+  /* left: 50%; */
+  transform: translate(-50%, -50%); /* Centre le texte */
+  justify-content: center;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.modal-header {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+.modal-footer {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-top-color: rgba(255, 255, 255, 0.25);
+}
+  
+@media (max-width: 768px) {
+  .modal-content{
+    width: 350px;
+    position: relative;
+    left: 55%;
+    right: 50%;
+    top: 50%;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s;
+
+  }
+  .img-fluid{
+    width: 250px;
+    height: auto;
+  }
+}

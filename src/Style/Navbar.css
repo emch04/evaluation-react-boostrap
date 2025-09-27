@@ -6,7 +6,7 @@
   justify-content: space-between; /* Espace entre le logo et les liens */
   align-items: center; /* Centre verticalement les éléments */
   padding: 15px 40px;
-  background: #111;
+  background: #212529;
   color: white;
   position: relative; /* Référence pour le menu mobile en position absolue */
 }
@@ -14,7 +14,55 @@
 /* Logo du site */
 .logo {
   font-size: 1.5rem;
-  font-weight: bold;
+  cursor: pointer; /* Ajout du curseur pour indiquer que c'est cliquable */
+}
+
+/* --- Modal GitHub --- */
+.github-modal {
+  position: fixed; /* Se positionne par rapport à la fenêtre du navigateur */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fond noir semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Au-dessus de tout le reste */
+}
+
+.github-modal-content {
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #333;
+}
+
+.github-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #212529;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.github-link:hover {
+  background-color: #555;
 }
 
 /* --- Liens de Navigation (Desktop) --- */
@@ -67,7 +115,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background: #111;
+    background: #212529;
     width: 200px;
     height: 33vh; /* Prend 33vh de la hauteur de l'écran */
     transition: transform 0.3s ease-in-out;
